@@ -1,0 +1,7 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Philipe Navarro
+	email = RasPhilCo@users.noreply.github.com
+[core]
+	excludesfile = /Users/<user>/.gitignore_global
