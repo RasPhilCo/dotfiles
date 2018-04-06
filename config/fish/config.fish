@@ -1,8 +1,13 @@
+# fish
 ## make abbr local to session
 set -g fish_user_abbreviations
-
-# nerdfonts from brew cask
+## RobotoMono nerd font
+## wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/RobotoMono/Regular/complete/Roboto%20Mono%20Nerd%20Font%20Complete.ttf
 set -g theme_nerd_fonts yes
+
+# docker
+alias dk 'docker'
+alias dkk 'docker-compose'
 
 # git
 abbr  g 'git'
@@ -24,24 +29,18 @@ end
 
 # heroku
 abbr h heroku
-abbr hd 'env HEROKU_DEBUG=1 heroku'
+abbr hd 'env DEBUG=\* heroku'
 abbr hpl 'heroku plugins:link'
 abbr hpi 'heroku plugins:install'
 abbr hpu 'heroku plugins:uninstall'
 abbr y yarn
-
-# cli-engine development
+## heroku cli development
 abbr nb './node_modules/.bin/'
 abbr br './bin/run'
-abbr brd 'env HEROKU_DEBUG=1 ./bin/run'
+abbr brd 'env DEBUG=\* ./bin/run'
 abbr brpl './bin/run plugins:link'
 abbr brpi './bin/run plugins:install'
 abbr brpu './bin/run plugins:uninstall'
 
-# rbenv
-status --is-interactive; and source (rbenv init -|psub)
-
-# nvm/node
-function nvm
-  bass source (brew --prefix nvm)/nvm.sh ';' nvm $argv
-end
+# postgres
+abbr pgbin '/Applications/Postgres.app/Contents/Versions/latest/bin/'
